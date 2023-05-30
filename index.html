@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone Feature Display</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <nav>
+        <div class="logo">
+          <img src="./images/logo.png" alt="" />
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Model</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Cart</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="information">
+        <div class="overlay"></div>
+        <img class="mobile" src="./images/mobile.png" alt="" />
+        <div id="circle">
+          <div class="feature one">
+            <img src="./images/camera.png" alt="" />
+            <div>
+              <h1>Camera</h1>
+              <p>24MP, 2160p, Wide Angle Lens</p>
+            </div>
+          </div>
+
+          <div class="feature two">
+            <img src="./images/processor.png" alt="" />
+            <div>
+              <h1>Processor</h1>
+              <p>4GB RAM, Apple A13 Bionic Chip</p>
+            </div>
+          </div>
+
+          <div class="feature three">
+            <img src="./images/display.png" alt="" />
+            <div>
+              <h1>Display</h1>
+              <p>6.1" Fullscreen, 828x1792 pixels</p>
+            </div>
+          </div>
+
+          <div class="feature four">
+            <img src="./images/battery.png" alt="" />
+            <div>
+              <h1>Battery</h1>
+              <p>3110 mAh, Li-Ion, 14.03 hours</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <img src="./images/arrow.png" alt="" id="upBtn" />
+        <h3>Features</h3>
+        <img src="./images/arrow.png" alt="" id="downBtn" />
+      </div>
+    </div>
+
+    <script>
+      var circle = document.getElementById("circle");
+      var upBtn = document.getElementById("upBtn");
+      var downBtn = document.getElementById("downBtn");
+
+      var rotateValue = circle.style.transform;
+      var rotateSum;
+
+      upBtn.onclick = function () {
+        rotateSum = rotateValue + "rotate(-90deg)";
+        circle.style.transform = rotateSum;
+        rotateValue = rotateSum;
+      };
+
+      downBtn.onclick = function () {
+        rotateSum = rotateValue + "rotate(90deg)";
+        circle.style.transform = rotateSum;
+        rotateValue = rotateSum;
+      };
+    </script>
+  </body>
+</html>
